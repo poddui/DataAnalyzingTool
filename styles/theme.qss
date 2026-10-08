@@ -1,0 +1,354 @@
+QMainWindow, QWidget {
+    background-color: #1c1c1e;
+    color: #f4f4f5;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+QLabel {
+    color: #f4f4f5;
+}
+
+/* Global Buttons - smaller + very sharp + more green accents */
+QPushButton {
+    background-color: #27272a;
+    color: #f4f4f5;
+    border: 1px solid #3f3f46;
+    border-radius: 2px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 500;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: #3f3f46;
+    border: 1px solid #22c55e;
+}
+
+QPushButton:pressed {
+    background-color: #15803d;
+    border-color: #22c55e;
+    color: #ffffff;
+}
+
+/* Search button stronger green */
+QPushButton#searchButton {
+    border-color: #166534;
+}
+
+QPushButton#searchButton:hover {
+    background-color: #166534;
+    border-color: #22c55e;
+    color: #f4f4f5;
+}
+
+QPushButton:focus {
+    border: 1px solid #22c55e;
+}
+
+/* Back buttons (used on data pages) - sharper */
+QPushButton#backButton {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-weight: 500;
+}
+
+QPushButton#backButton:hover {
+    background-color: #3f3f46;
+    border-color: #22c55e;
+}
+
+QPushButton#backButton:pressed {
+    background-color: #15803d;
+}
+
+/* Inputs */
+QLineEdit {
+    background-color: #27272a;
+    color: #f4f4f5;
+    border: 1px solid #3f3f46;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #22c55e;
+    background-color: #2a2a2d;
+}
+
+/* Stock search bar - sharper + green accent on focus */
+QLineEdit#stockSearch {
+    border-radius: 2px;
+    border: 1px solid #3f3f46;
+    padding: 4px 8px;
+    font-size: 12.5px;
+}
+
+QLineEdit#stockSearch:focus {
+    border: 1px solid #22c55e;
+    background-color: #252528;
+    border-left: 2px solid #22c55e;   /* green left accent */
+}
+
+QTextEdit {
+    background-color: #1c1c1e;
+    color: #e4e4e7;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+QComboBox {
+    background-color: #27272a;
+    color: #f4f4f5;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    padding: 6px 12px;
+    min-height: 32px;
+}
+
+QComboBox:hover {
+    border: 1px solid #22c55e;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #27272a;
+    color: #f4f4f5;
+    border: 1px solid #3f3f46;
+    selection-background-color: #166534;
+}
+
+/* Tables - more green accents */
+QTableWidget {
+    background-color: #1c1c1e;
+    alternate-background-color: #242426;
+    color: #f4f4f5;
+    gridline-color: #3f3f46;
+    border: 1px solid #3f3f46;
+    border-radius: 3px;
+}
+
+QTableWidget::item:selected {
+    background-color: #166534;
+    color: #f4f4f5;
+    border-left: 3px solid #22c55e;
+}
+
+QHeaderView::section {
+    background-color: #27272a;
+    color: #a1a1aa;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid #3f3f46;
+    font-weight: 600;
+}
+
+QHeaderView::section:hover {
+    color: #22c55e;
+}
+
+/* Stock search results list - NO separator lines whatsoever */
+QListWidget#resultList {
+    background-color: #1c1c1e;
+    border: 1px solid #3f3f46;
+    border-radius: 2px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Force every item state to have literally zero border or line */
+QListWidget#resultList::item {
+    padding: 3px 6px;
+    margin: 0;
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    background: transparent;
+}
+
+QListWidget#resultList::item:selected {
+    background-color: #166534;
+    border-left: 3px solid #22c55e !important;
+}
+
+QListWidget#resultList::item:hover:!selected {
+    background-color: #2f2f32;
+}
+
+/* The row widget we put inside + the list's internal view must never paint lines */
+QWidget#resultRow,
+QWidget#resultRow *,
+QListWidget#resultList::viewport,
+QListWidget#resultList QAbstractItemView,
+QListWidget#resultList QScrollBar {
+    background: transparent !important;
+    border: none !important;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Splitter */
+QSplitter::handle {
+    background-color: #3f3f46;
+}
+
+/* Frames / Cards */
+QFrame {
+    border-radius: 4px;
+}
+
+#quoteCard {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 4px;
+}
+
+/* Start Page Specific */
+#startTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f4f4f5;
+    letter-spacing: 0.5px;
+}
+
+#startSubtitle {
+    font-size: 15px;
+    color: #22c55e;
+}
+
+#startFooter {
+    color: #22c55e;
+    font-size: 12px;
+}
+
+/* Start Page Action Buttons (grid) - sharper, smaller, green text */
+QPushButton[actionButton="true"] {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 3px;
+    min-height: 78px;
+    min-width: 170px;
+    text-align: center;
+    padding: 0;
+}
+
+QPushButton[actionButton="true"]:hover {
+    background-color: #3f3f46;
+    border: 1px solid #22c55e;
+}
+
+QPushButton[actionButton="true"]:pressed {
+    background-color: #15803d;
+    border-color: #22c55e;
+}
+
+/* Icon and text inside start buttons - NO circles, clean */
+QPushButton[actionButton="true"] QLabel#actionIcon {
+    font-size: 20px;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0;
+    margin: 0;
+}
+
+QPushButton[actionButton="true"] QLabel#actionText {
+    font-size: 12px;
+    font-weight: 600;
+    color: #22c55e;   /* Green import text */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* Status / hint labels */
+QLabel[role="status"] {
+    color: #a1a1aa;
+    font-size: 13px;
+}
+
+QLabel[role="fileLabel"] {
+    color: #a1a1aa;
+    font-size: 13px;
+}
+
+/* Web link in stock detail */
+QLabel[role="webLink"] {
+    color: #22c55e;
+}
+
+/* Stock detail specific labels */
+QLabel#stockSymbol {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f4f4f5;
+}
+
+QLabel#stockName {
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+QLabel#stockMeta {
+    color: #a1a1aa;
+    font-size: 12px;
+}
+
+QLabel#stockPrice {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f4f4f5;
+}
+
+QLabel#stockChange {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QLabel#stockChange[change="positive"] { color: #22c55e; }
+QLabel#stockChange[change="negative"] { color: #ef4444; }
+QLabel#stockChange[change="neutral"]  { color: #71717a; }
+
+QLabel#stockWeb {
+    color: #22c55e;
+}
+
+QLabel#metricTitle {
+    color: #71717a;
+    font-size: 11px;
+}
+
+QLabel#metricValue {
+    font-weight: 600;
+    color: #e4e4e7;
+}
+
+/* Result list row labels (stock search) */
+QLabel#resultSymbol {
+    font-weight: 700;
+    color: #f4f4f5;
+}
+
+QLabel#resultKind {
+    color: #71717a;
+    font-size: 11px;
+}
+
+QLabel#resultName {
+    color: #a1a1aa;
+}
